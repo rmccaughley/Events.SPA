@@ -1,0 +1,7 @@
+﻿Test App ID
+tq5UXJMd
+Secret key (use this for calling the REST API)
+sk_test_IdLnDwPkVcr2ziRYOcJNIkDbRvkeOrOM
+Test app name
+Events
+
