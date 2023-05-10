@@ -25,18 +25,27 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="app.db" CopyToOutputDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
-  </ItemGroup>
-  <ItemGroup>
     <!-- Don't publish the SPA source files, but do show them in the project files list -->
     <Content Remove="$(SpaRoot)**" />
     <None Remove="$(SpaRoot)**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
     <None Remove="ClientApp\src\components\Chat\" />
+    <None Remove="Data\Entities\" />
+    <None Remove="ClientApp\src\Views\" />
+    <None Remove="ClientApp\src\Views\Events\" />
+    <None Remove="ClientApp\src\components\Map\" />
+    <None Remove="ClientApp\src\Views\NewEvent\" />
+    <None Remove="ViewModels\" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="ClientApp\src\components\Chat\" />
+    <Folder Include="Data\Entities\" />
+    <Folder Include="ClientApp\src\Views\" />
+    <Folder Include="ClientApp\src\Views\Events\" />
+    <Folder Include="ClientApp\src\components\Map\" />
+    <Folder Include="ClientApp\src\Views\NewEvent\" />
+    <Folder Include="ViewModels\" />
   </ItemGroup>
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
     <!-- Ensure Node.js is installed -->
